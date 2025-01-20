@@ -1,2 +1,2 @@
-# s24
-Spring 2024
+# s25
+Spring 2025
