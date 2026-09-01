@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CSCI 3345: Machine Learning at Boston College, Fall 2026">
+  <title>CSCI 3345: Fall 2026</title>
+  <link rel="stylesheet" href="../shared/main.css">
+  <style>
+    :root { --accent: #8c2433; --accent-dark: #651724; --soft: #f8f3f4; }
+    a { color: var(--accent); }
+    a.nounderline, a.stafflink { border-bottom: 0; text-decoration: none; }
+    .bgimg {
+      min-height: 200px;
+      padding: 2rem 1.5rem 1.5rem;
+      color: #fff;
+      background: #5dac81;
+    }
+    .bgimg h1, .bgimg h2 { color: #fff; margin: 0; }
+    .bgimg h1 { font-size: clamp(2.25rem, 4vw, 3.35rem); line-height: 1.08; }
+    .bgimg h2 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: center;
+      gap: 1.5rem;
+      max-width: 62rem;
+      margin: 1.5rem auto 0;
+      font-size: clamp(.95rem, 1.55vw, 1.2rem);
+      line-height: 1.45;
+    }
+    .bgimg a { color: #fff; border-color: rgba(255,255,255,.5); }
+    .sep { display: none; }
+    #nav a { color: #535353; }
+    .staff-grid { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+    .staff-card { width: 260px; text-align: center; }
+    .nowrap { white-space: nowrap; }
+    .staff-card img { width: 145px; height: 145px; object-fit: cover; border-radius: 50%; }
+    .table-wrapper table { font-size: .95rem; }
+    td.topic { font-weight: 500; }
+    tr.no-class td { background: #f6f1ef; }
+    tr.deadline td { background: #fbf7ec; }
+    .tag { display: inline-block; margin-top: .35rem; padding: .08rem .45rem; border-radius: 999px; background: #f0e3e5; color: var(--accent-dark); font-size: .78rem; font-weight: 600; }
+    .info-block { margin-bottom: 2.25rem; }
+    .info-block h3 { color: var(--accent-dark); }
+    .compact li { margin-bottom: .35rem; }
+    .overview-details { margin-top: 1.5rem; }
+    .overview-details > ul > li { margin-bottom: 1rem; }
+    .overview-details ul ul { margin: .35rem 0 0 1.5rem; }
+    @media (max-width: 980px) {
+      .bgimg h2 { gap: .75rem; }
+      #nav b { display: none; }
+      #nav li { margin: 0 .2rem; }
+    }
+    @media (max-width: 640px) {
+      .bgimg { min-height: 0; padding: 2rem 1rem; }
+      .bgimg h2 { display: block; margin-top: 1.2rem; }
+      .bgimg h2 > span:not(.sep) { display: block; margin: .45rem 0; }
+      #main > .main { padding-left: 1.15rem; padding-right: 1.15rem; }
+      .table-wrapper table { min-width: 820px; }
+      .staff-grid { gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header" class="alt">
+      <div class="bgimg">
+        <h1>CSCI 3345: Machine Learning</h1>
+        <h2>
+          <span>Instructor: <a href="https://yyuanad.github.io/" class="nounderline">Yuan Yuan</a></span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span>Fall 2026 · Tu/Th 12:00–1:15 PM</span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span><a href="https://www.bc.edu/bc-web/sites/245-beacon-st.html" target="_blank" rel="noopener">245 Beacon Street, Room 214</a></span>
+        </h2>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#overview">Overview</a></li> <b>·</b>
+        <li><a href="#staff">Staff</a></li> <b>·</b>
+        <li><a href="#schedule" class="active">Schedule</a></li> <b>·</b>
+        <li><a href="#assessment">Assessment</a></li> <b>·</b>
+        <li><a href="#info">Course info</a></li> <b>·</b>
+        <li><a href="https://bostoncollege.instructure.com/courses/1687463" target="_blank" rel="noopener">Canvas</a></li>
+      </ul>
+    </nav>
+
+    <div id="main">
+      <section id="overview" class="main special">
+        <header class="major"><h2>Overview</h2></header>
+        <div class="spotlight" style="width:90%;text-align:left;margin:auto;">
+          <div class="content">
+            <p>CSCI 3345 introduces the principles, algorithms, and practice of machine learning. The course covers supervised, unsupervised, and reinforcement learning, with an emphasis on understanding model assumptions and objectives, implementing core algorithms, and evaluating learning systems using appropriate data splits and metrics.</p>
+            <p>Topics include linear and probabilistic models, feature engineering, regularization, neural networks, CNNs, support vector machines and kernels, clustering, PCA, autoencoders and VAEs, reinforcement learning, nearest neighbors, and decision trees. Through mathematical exercises, hands-on Python assignments, and a team project, students learn to formulate learning problems, fit and compare models, analyze errors, and communicate results and limitations.</p>
+
+            <div class="overview-details">
+              <ul>
+                <li><b>Learning Objectives:</b><br>
+                  After completing the course, students should be able to:
+                  <ul class="compact">
+                    <li>Formulate a well-posed machine-learning problem by identifying the inputs, outputs, objective, baseline, data splits, and evaluation metrics.</li>
+                    <li>Implement and analyze core learning algorithms for regression, classification, clustering, dimensionality reduction, and introductory sequential decision-making.</li>
+                    <li>Compare supervised, unsupervised, and reinforcement-learning paradigms and explain the inductive biases of major model families.</li>
+                    <li>Integrate data preparation, model fitting, regularization, model selection, and evaluation into an end-to-end machine-learning workflow without data leakage.</li>
+                    <li>Use probability, linear algebra, multivariable calculus, and optimization to derive and interpret core machine-learning methods.</li>
+                    <li>Design reproducible experiments on real and synthetic data, analyze errors and uncertainty, and communicate results and limitations clearly.</li>
+                  </ul>
+                </li>
+
+                <li><b>Prerequisites:</b>
+                  <ul class="compact">
+                    <li><b>Courses:</b> (CSCI 2244 or MATH 4426) and CSCI 1102.</li>
+                    <li><b>Programming:</b> Familiarity with algorithms, data structures, functions, classes, and basic numerical programming. We use Python, NumPy, pandas, matplotlib, and scikit-learn throughout the course. <a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank" rel="noopener"><i>Python/NumPy tutorial</i></a>.</li>
+                    <li><b>Mathematics:</b> Vectors, matrices, matrix multiplication, derivatives, partial derivatives, gradients, and the chain rule.</li>
+                    <li><b>Probability:</b> Random variables, common distributions, conditional probability, expectation, variance, and Bayes' rule.</li>
+                  </ul>
+                </li>
+
+                <li><b>Lecture:</b><br>
+                  Lectures meet on Tuesdays and Thursdays from 12:00 PM to 1:15 PM in 245 Beacon Street, Room 214.
+                </li>
+
+                <li><b>Textbooks and Materials:</b><br>
+                  There is no required textbook for the course. Lecture notes and selected readings will be posted on Canvas. The following books and online resources may be useful as references on relevant topics:
+                  <ul class="compact">
+                    <li><a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener"><i>Deep Learning</i></a>, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, MIT Press, 2016. ISBN: 9780262035613.</li>
+                    <li><a href="https://work.caltech.edu/textbook.html" target="_blank" rel="noopener"><i>Learning from Data: A Short Course</i></a>, Yaser S. Abu-Mostafa, Malik Magdon-Ismail, and Hsuan-Tien Lin.</li>
+                    <li><a href="https://mml-book.github.io/" target="_blank" rel="noopener"><i>Mathematics for Machine Learning</i></a>, Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong.</li>
+                    <li><a href="https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/" target="_blank" rel="noopener"><i>Pattern Recognition and Machine Learning</i></a>, Christopher M. Bishop.</li>
+                    <li><a href="https://probml.github.io/pml-book/book1.html" target="_blank" rel="noopener"><i>Probabilistic Machine Learning: An Introduction</i></a>, Kevin P. Murphy.</li>
+                    <li><a href="https://d2l.ai/" target="_blank" rel="noopener"><i>Dive into Deep Learning</i></a>, Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola.</li>
+                    <li><a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/" target="_blank" rel="noopener"><i>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</i></a>, Aurélien Géron.</li>
+                  </ul>
+                  You may also find the official PyTorch tutorial <a href="https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank" rel="noopener"><i>Deep Learning with PyTorch: A 60 Minute Blitz</i></a> helpful.
+                </li>
+              </ul>
+              <p><b>Acknowledgements:</b> Course materials draw on selected open educational resources from several machine-learning courses and textbooks. Specific sources are acknowledged in the relevant lecture materials.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="staff" class="main special">
+        <header class="major"><h2>Staff</h2></header>
+        <div class="staff-grid">
+          <div class="staff-card">
+            <img src="../shared/Yuan.jpg" alt="Yuan Yuan">
+            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank" rel="noopener">Yuan Yuan</a></b></div>
+            <div>Instructor</div>
+            <div>Thursdays, 1:30–3:30 PM<br><span class="nowrap">Room 528E, 245 Beacon St.</span></div>
+          </div>
+          <div class="staff-card">
+            <img src="src/stephen-jones.jpeg" alt="Stephen Jones">
+            <div><b><a href="mailto:jonesaoh@bc.edu" class="stafflink">Stephen Jones</a></b></div>
+            <div>Teaching Assistant</div>
+            <div>Tuesdays, 3:00–5:00 PM<br>CS Lab</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="schedule" class="main special">
+        <header class="major"><h2>Tentative Schedule</h2></header>
+        <p>The schedule may change to support student learning. Materials will be posted on Canvas.</p>
+        <div class="table-wrapper">
+          <table class="alt">
+            <colgroup><col style="width:13%"><col style="width:9%"><col style="width:56%"><col style="width:22%"></colgroup>
+            <thead><tr><th>Date</th><th>Mtg.</th><th>Topic and activity</th><th>Milestones</th></tr></thead>
+            <tbody>
+              <tr><td>Tue Sep 1</td><td>1</td><td class="topic">Introduction to machine learning and the ML workflow</td><td></td></tr>
+              <tr><td>Thu Sep 3</td><td>2</td><td class="topic">Data, notation, and train/validation/test splits</td><td></td></tr>
+              <tr><td>Tue Sep 8</td><td>3</td><td class="topic">Linear regression and Ridge regularization</td><td><span class="tag">HW 1 released</span></td></tr>
+              <tr class="no-class"><td>Thu Sep 10</td><td>—</td><td class="topic" colspan="2"><b>No class:</b> Mass of the Holy Spirit; classes canceled 12:00–1:15 PM</td></tr>
+              <tr><td>Tue Sep 15</td><td>4</td><td class="topic">Gradient-based optimization</td><td></td></tr>
+              <tr><td>Thu Sep 17</td><td>5</td><td class="topic">Logistic regression and thresholding</td><td><span class="tag">Quiz 1</span></td></tr>
+              <tr class="deadline"><td>Sun Sep 20</td><td>—</td><td class="topic">HW 1: Linear Regression and Optimization</td><td><b>Due 11:59 PM</b></td></tr>
+              <tr><td>Tue Sep 22</td><td>6</td><td class="topic">Feature engineering I: polynomial features</td><td><span class="tag">HW 2 released Sep 21</span></td></tr>
+              <tr><td>Thu Sep 24</td><td>7</td><td class="topic">Feature engineering II: overfitting and validation</td><td></td></tr>
+              <tr><td>Tue Sep 29</td><td>8</td><td class="topic">k-nearest neighbors</td><td><span class="tag">Quiz 2</span><br>Project idea mixer</td></tr>
+              <tr><td>Thu Oct 1</td><td>9</td><td class="topic">Decision trees</td><td></td></tr>
+              <tr class="deadline"><td>Sun Oct 4</td><td>—</td><td class="topic">HW 2: Logistic Regression and Generalization</td><td><b>Due 11:59 PM</b></td></tr>
+              <tr><td>Tue Oct 6</td><td>10</td><td class="topic">Maximum likelihood estimation</td><td><span class="tag">HW 3 released Oct 5</span></td></tr>
+              <tr><td>Thu Oct 8</td><td>11</td><td class="topic">MLE applications and introduction to MAP</td><td>Teams formed</td></tr>
+              <tr class="deadline"><td>Sun Oct 11</td><td>—</td><td class="topic">HW 3: KNN, Trees, and Feature Engineering</td><td><b>Due 11:59 PM</b></td></tr>
+              <tr class="no-class"><td>Tue Oct 13</td><td>—</td><td class="topic" colspan="2"><b>No class:</b> substitute Monday class schedule</td></tr>
+              <tr><td>Thu Oct 15</td><td>12</td><td class="topic">Maximum a posteriori estimation</td><td><span class="tag">Quiz 3</span><br><span class="tag">HW 4 released Oct 12</span></td></tr>
+              <tr><td>Tue Oct 20</td><td>13</td><td class="topic">Generalization and bias–variance</td><td>Project proposal due</td></tr>
+              <tr><td>Thu Oct 22</td><td>14</td><td class="topic">Evaluation metrics and imbalanced learning</td><td></td></tr>
+              <tr><td>Tue Oct 27</td><td>15</td><td class="topic">Support vector machines and kernels</td><td></td></tr>
+              <tr><td>Thu Oct 29</td><td>16</td><td class="topic">Neural networks</td><td><span class="tag">Quiz 4</span></td></tr>
+              <tr class="deadline"><td>Sun Nov 1</td><td>—</td><td class="topic">HW 4: Probabilistic Models and Kernels</td><td><b>Due 11:59 PM</b></td></tr>
+              <tr><td>Tue Nov 3</td><td>17</td><td class="topic">Multilayer perceptrons and backpropagation</td><td><span class="tag">HW 5 released Nov 2</span></td></tr>
+              <tr><td>Thu Nov 5</td><td>18</td><td class="topic">CNNs and image applications</td><td></td></tr>
+              <tr><td>Tue Nov 10</td><td>19</td><td class="topic">PyTorch and neural-network training</td><td>Project checkpoint due</td></tr>
+              <tr><td>Thu Nov 12</td><td>20</td><td class="topic">Clustering: k-means, Gaussian mixtures, and EM</td><td><span class="tag">Quiz 5</span></td></tr>
+              <tr class="deadline"><td>Sun Nov 15</td><td>—</td><td class="topic">HW 5: Neural Networks and Backpropagation</td><td><b>Due 11:59 PM</b></td></tr>
+              <tr><td>Tue Nov 17</td><td>21</td><td class="topic">PCA, autoencoders, and VAEs</td><td><span class="tag">HW 6 released Nov 16</span></td></tr>
+              <tr><td>Thu Nov 19</td><td>22</td><td class="topic">Reinforcement Learning: MDPs and Value Functions</td><td></td></tr>
+              <tr><td>Tue Nov 24</td><td>23</td><td class="topic">Reinforcement Learning: MDPs and Value Functions</td><td></td></tr>
+              <tr class="no-class"><td>Thu Nov 26</td><td>—</td><td class="topic" colspan="2"><b>No class:</b> Thanksgiving Holiday</td></tr>
+              <tr><td>Tue Dec 1</td><td>24</td><td class="topic">Reinforcement Learning: Q-Learning and Deep RL</td><td></td></tr>
+              <tr><td>Thu Dec 3</td><td>25</td><td class="topic">Reinforcement Learning: Q-Learning and Deep RL</td><td><span class="tag">Quiz 6</span></td></tr>
+              <tr class="deadline"><td>Fri Dec 4</td><td>—</td><td class="topic">HW 6: Unsupervised and Sequential Learning</td><td><b>Due 11:59 PM</b></td></tr>
+              <tr><td>Tue Dec 8</td><td>26</td><td class="topic">Project presentations I</td><td>Presentations</td></tr>
+              <tr><td>Thu Dec 10</td><td>27</td><td class="topic">Project presentations II</td><td>Presentations</td></tr>
+              <tr class="deadline"><td>Wed Dec 16</td><td>—</td><td class="topic">Final project package</td><td><b>Due 11:59 PM</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="assessment" class="main special">
+        <header class="major"><h2>Assessment</h2></header>
+        <div class="table-wrapper" style="width:90%;margin:auto;">
+          <table class="alt">
+            <thead><tr><th>Component</th><th>Weight</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td>Six individual homework/lab assignments</td><td><b>20%</b></td><td>Derivations, implementation, and empirical analysis</td></tr>
+              <tr><td>Six individual in-class quizzes (best five)</td><td><b>40%</b></td><td>Conceptual, mathematical, and applied mastery</td></tr>
+              <tr><td>Team project</td><td><b>40%</b></td><td>End-to-end investigation, individual understanding, and communication</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="width:90%;text-align:left;margin:2rem auto 0;">
+          <p>There is no midterm or final exam, and attendance is not graded. Six announced, closed-book quizzes are normally given at the beginning of class and last approximately 20 minutes; the lowest score is dropped.</p>
+          <p>Teams of two or three complete an end-to-end project with a proposal, reproducible baseline/checkpoint, code and report, presentation, individual technical defense, and contribution statement. Strong projects use a precise question, a defensible evaluation plan, controlled comparisons, error analysis, uncertainty where appropriate, and reproducible instructions.</p>
+        </div>
+      </section>
+
+      <section id="info" class="main">
+        <header class="major"><h2>Course Information</h2></header>
+        <div style="width:90%;margin:auto;">
+          <div class="info-block">
+            <h3>Homework and late work</h3>
+            <p>Homework mixes short written questions with Python implementation and analysis. Some functions must be implemented from scratch; other parts intentionally use scikit-learn. Each assignment states permitted libraries and AI mode. Students receive <b>four 24-hour slip days</b> for individual homework, with no more than two used on one assignment. Canvas contains the exact submission instructions and current deadlines.</p>
+          </div>
+          <div class="info-block">
+            <h3>Collaboration and academic integrity</h3>
+            <p>Students may discuss concepts and high-level approaches, but homework code and written answers must be produced individually unless an assignment explicitly says otherwise. Do not exchange code, equations, written solutions, screenshots, or autograder output. List collaborators and outside sources on every submission. Project teammates may share work within their team.</p>
+          </div>
+          <div class="info-block">
+            <h3>Generative AI: consulting is allowed; authorship is not</h3>
+            <p>Assignments use three explicit modes: <b>Foundation</b> (AI-free core work), <b>Consulting</b> (documented explanation, testing, or debugging help after an initial attempt), and <b>Audit</b> (AI use is required, then critically tested and revised). Students remain responsible for every submitted line and claim and must be able to explain their work. AI tools are not permitted during quizzes.</p>
+          </div>
+          <div class="info-block">
+            <h3>Accessibility, inclusion, and support</h3>
+            <p>Students seeking disability accommodations should contact the appropriate Boston College accessibility office as early as possible and share approved accommodation information with the instructor. Please also contact the instructor early about religious observances, approved university activities, documented illness, or circumstances that affect participation. See <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html" target="_blank" rel="noopener">University Counseling Services</a> for confidential support.</p>
+          </div>
+          <div class="info-block">
+            <h3>Getting help</h3>
+            <p>Use office hours for conceptual questions, derivations, debugging strategy, project design, and feedback on experimental reasoning. Course questions whose answers would benefit everyone should be posted through the class discussion channel on Canvas. Email staff for private matters.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <p class="copyright">© 2026 Boston College. Website based on a template from <a href="https://html5up.net/" target="_blank" rel="noopener">HTML5 UP</a>.</p>
+    </footer>
+  </div>
+
+  <script src="../shared/jquery.min.js"></script>
+  <script src="../shared/jquery.scrollex.min.js"></script>
+  <script src="../shared/jquery.scrolly.min.js"></script>
+  <script src="../shared/skel.min.js"></script>
+  <script src="../shared/util.js"></script>
+</body>
+</html>
